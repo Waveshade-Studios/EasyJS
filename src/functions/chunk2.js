@@ -1,4 +1,4 @@
-import { indexing } from "./indexing";
+import { indexing } from ".";
 
 export const chunk2 = (arr, num) => {
   const results = [];

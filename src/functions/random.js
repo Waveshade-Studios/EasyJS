@@ -1,4 +1,4 @@
-import { sum } from "./sum";
+import { sum } from ".";
 
 export const random = () => {
   const currentStamp = new Date() * 1;
