@@ -1,10 +1,19 @@
-import { random, sum } from ".";
+import { random, sum, toNumber } from ".";
 
 export const randomNumber = (a, b) => {
-  if (!a) return NaN;
-  const num1 = !b ? 0 : Number(a);
-  const num2 = !b ? Number(a) : Number(b);
+  const numa = toNumber(a);
+  const numb = toNumber(b);
+  let num1 = 0;
+  let num2 = 0;
 
-  if (isNaN(num1) || isNaN(num2)) return NaN;
+  if (numa === numb) return numa;
+  if (numb < numa) {
+    num1 = numb;
+    num2 = numa;
+  } else {
+    num1 = numa;
+    num2 = numb;
+  }
+  
   return parseInt(sum(random() * sum(sum(num2, -num1), 1), num1));
 };
